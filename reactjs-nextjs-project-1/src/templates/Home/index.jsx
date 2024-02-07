@@ -11,7 +11,7 @@ export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [allPosts, setAllPosts] = useState([]);
   const [page, setPage] = useState(0);
-  const [postsPerPage] = useState(2);
+  const [postsPerPage] = useState(10);
   const [searchValue, setSearchValue] = useState("");
 
   const handleLoadPosts = useCallback(async (page, postsPerPage) => {
@@ -52,7 +52,7 @@ export const Home = () => {
       <div className="search-container">
         {!!searchValue && <h1>Search value: {searchValue}</h1>}
 
-        <TextInput searchValue={searchValue} handleChange={handleChange} />
+        {<TextInput searchValue={searchValue} handleChange={handleChange} />}
       </div>
 
       {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
