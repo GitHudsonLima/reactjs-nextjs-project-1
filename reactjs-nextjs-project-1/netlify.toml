@@ -1,0 +1,11 @@
+[context.production]
+  PUBLIC_URL = "."
+
+[context.deploy-preview]
+  PUBLIC_URL = "."
+
+[context.branch-deploys]
+  PUBLIC_URL = "."
+
+[context.local-development]
+  PUBLIC_URL = "."
